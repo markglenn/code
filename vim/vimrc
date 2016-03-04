@@ -4,16 +4,16 @@ if &compatible
 endif
 
 " Required:
-set runtimepath^=~/.dotfiles/vim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath^=~/.code/vim/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin(expand('~/.dotfiles/vim/dein'))
+call dein#begin(expand('~/.code/vim/dein'))
 
 " Let dein manage dein
 " Required:
 call dein#add('Shougo/dein.vim')
 
-source ~/.dotfiles/vim/bundles.vim
+source ~/.code/vim/bundles.vim
 
 " Required:
 call dein#end()
@@ -28,6 +28,6 @@ filetype plugin indent on
 
 "End dein Scripts-------------------------
 
-for fpath in split(globpath('~/.dotfiles/vim/settings', '*.vim'), '\n')
+for fpath in split(globpath('~/.code/vim/settings', '*.vim'), '\n')
   execute 'source' fpath
 endfor

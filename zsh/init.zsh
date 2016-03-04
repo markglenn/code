@@ -1,5 +1,9 @@
-for lib_file ($HOME/.dotfiles/zsh/lib/*.zsh); do
+for lib_file ($HOME/.code/zsh/lib/*.zsh); do
   source $lib_file
 done
 
-source $HOME/.dotfiles/zsh/themes/basic.zsh-theme
+for plugin_file ($HOME/.code/zsh/plugins/*.zsh); do
+  source $plugin_file
+done
+
+source $HOME/.code/zsh/themes/basic.zsh-theme
