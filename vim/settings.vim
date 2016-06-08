@@ -24,3 +24,25 @@ command! W w
 command! Q q
 command! Qa qa
 command! QA qa
+
+colorscheme solarized
+
+" Remove the scrollbar
+set guioptions-=r
+set guioptions-=L
+
+" Set font
+set guifont=Monaco\ for\ Powerline:h13
+
+" Search options
+:set incsearch
+:set hlsearch
+
+" Whitespace highlighting
+
+silent! nnoremap <silent> <Leader>$ :set list!<CR>
+silent! nnoremap <silent> <Leader>h :noh<return>
+
+" Pretty UTF8 characters
+set listchars=tab:▸\ ,eol:¬
+set showbreak=…

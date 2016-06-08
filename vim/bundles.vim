@@ -30,3 +30,6 @@ call dein#add('tpope/vim-markdown')
 " Git
 call dein#add('tpope/vim-fugitive')
 call dein#add('airblade/vim-gitgutter')
+
+" Color schemes
+call dein#add('altercation/vim-colors-solarized')

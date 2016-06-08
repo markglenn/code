@@ -1,4 +1,13 @@
 export ZSH=$HOME/.code/zsh
 
-plugins=(code git)
+plugins=(code git rbenv)
 source $ZSH/init.zsh
+
+export PATH="/usr/local/bin:$PATH"
+
+if [ -e /usr/local/bin/mvim ]; then
+  alias m=mvim
+  alias v="mvim -v"
+  alias vim="mvim -v"
+  export EDITOR="mvim -v"
+fi
