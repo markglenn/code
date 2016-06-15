@@ -10,4 +10,10 @@ if [ -e /usr/local/bin/mvim ]; then
   alias v="mvim -v"
   alias vim="mvim -v"
   export EDITOR="mvim -v"
+else
+  alias v="vim"
+fi
+
+if type thefuck > /dev/null 2>&1; then
+  eval $(thefuck --alias)
 fi
