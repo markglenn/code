@@ -1,6 +1,6 @@
 export ZSH=$HOME/.code/zsh
 
-plugins=(code git rbenv)
+plugins=(code git rbenv mix)
 source $ZSH/init.zsh
 
 export PATH="/usr/local/bin:$PATH"
