@@ -3,6 +3,8 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('ervandew/supertab')
 call dein#add('jlanzarotta/bufexplorer')
 call dein#add('editorconfig/editorconfig-vim')
+call dein#add('vim-airline/vim-airline')
+call dein#add('henrik/vim-indexed-search')
 
 call dein#add('kien/ctrlp.vim')
 
