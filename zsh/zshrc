@@ -1,6 +1,6 @@
 export ZSH=$HOME/.code/zsh
 
-plugins=(code git rbenv mix)
+plugins=(code git rbenv mix ruby)
 source $ZSH/init.zsh
 
 export PATH="/usr/local/bin:$PATH"
@@ -17,3 +17,9 @@ fi
 if type thefuck > /dev/null 2>&1; then
   eval $(thefuck --alias)
 fi
+
+case $TERM in
+    xterm*)
+        precmd () {print -Pn "\e]0;%~\a"}
+        ;;
+esac

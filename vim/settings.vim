@@ -38,6 +38,8 @@ set guifont=Monaco\ for\ Powerline:h13
 set incsearch
 set hlsearch
 
+" Always show the status line
+set laststatus=2
 
 " Whitespace highlighting
 silent! nnoremap <silent> <Leader>$ :set list!<CR>
@@ -47,4 +49,13 @@ silent! nnoremap <silent> <Leader>h :noh<return>
 set listchars=tab:▸\ ,eol:¬
 set showbreak=…
 
+if has('mouse_sgr')
+  set mouse=a
+  set ttymouse=sgr
+elseif has('mouse')
+  set mouse=a
+  set ttymouse=xterm2
+endif
+
 set completeopt=longest,menu
+runtime macros/matchit.vim
