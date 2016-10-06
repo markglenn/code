@@ -59,3 +59,5 @@ endif
 
 set completeopt=longest,menu
 runtime macros/matchit.vim
+
+set clipboard=unnamed
