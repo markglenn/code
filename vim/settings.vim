@@ -61,3 +61,4 @@ set completeopt=longest,menu
 runtime macros/matchit.vim
 
 set clipboard=unnamed
+let g:neocomplete#enable_at_startup = 1

@@ -5,6 +5,7 @@ call dein#add('jlanzarotta/bufexplorer')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('vim-airline/vim-airline')
 call dein#add('henrik/vim-indexed-search')
+call dein#add('Shougo/neocomplete.vim')
 
 call dein#add('kien/ctrlp.vim')
 

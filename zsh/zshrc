@@ -23,3 +23,7 @@ case $TERM in
         precmd () {print -Pn "\e]0;%~\a"}
         ;;
 esac
+
+export GOPATH="${HOME}/gocode"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
