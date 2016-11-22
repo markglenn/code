@@ -24,9 +24,15 @@ call dein#add('tpope/vim-haml')
 " Python specific
 call dein#add('klen/python-mode')
 
+" Elixir specific
+call dein#add('elixir-lang/vim-elixir')
+call dein#add('slashmili/alchemist.vim')
+let g:alchemist_tag_disable = 1
+call dein#add('c-brenn/phoenix.vim')
+call dein#add('tpope/vim-projectionist')
+
 " Other languages
 call dein#add('scrooloose/syntastic')
-call dein#add('elixir-lang/vim-elixir')
 call dein#add('fatih/vim-go')
 call dein#add('tpope/vim-markdown')
 
@@ -36,3 +42,6 @@ call dein#add('airblade/vim-gitgutter')
 
 " Color schemes
 call dein#add('altercation/vim-colors-solarized')
+
+call dein#add('ludovicchabant/vim-gutentags')
+let g:gutentags_cache_dir = '~/.tags_cache'
