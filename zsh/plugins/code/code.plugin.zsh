@@ -9,5 +9,7 @@ function c(){
 
   if [ -d "$code_path/$1" ]; then
     cd "$code_path/$1"
+  else
+    (>&2 echo "no such file or directory: $code_path/$1")
   fi
 }
