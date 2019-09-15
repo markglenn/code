@@ -12,6 +12,7 @@ if [ -e /usr/local/bin/mvim ]; then
   export EDITOR="mvim -v"
 else
   alias v="vim"
+  export EDITOR="vim"
 fi
 
 if type thefuck > /dev/null 2>&1; then
@@ -25,7 +26,9 @@ case $TERM in
 esac
 
 export GOPATH="${HOME}/gocode"
-export GOROOT="$(brew --prefix golang)/libexec"
+if type brew > /dev/null 2>&1; then
+  export GOROOT="$(brew --prefix golang)/libexec"
+fi
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 export NVM_DIR="$HOME/.nvm"
