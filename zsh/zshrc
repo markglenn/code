@@ -5,8 +5,8 @@ source $ZSH/init.zsh
 
 export PATH="/usr/local/bin:$PATH"
 
-if [ -e /usr/local/bin/mvim ]; then
-  alias m=mvim
+if type mvim > /dev/null 2>&1; then
+  alias m="mvim $@ > /dev/null 2>&1"
   alias v="mvim -v"
   alias vim="mvim -v"
   export EDITOR="mvim -v"
@@ -25,14 +25,26 @@ case $TERM in
         ;;
 esac
 
+export NODE_TLS_REJECT_UNAUTHORIZED=0
 export GOPATH="${HOME}/gocode"
+
 if type brew > /dev/null 2>&1; then
   export GOROOT="$(brew --prefix golang)/libexec"
+  . $(brew --prefix asdf)/asdf.sh
+  . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 fi
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.mix/escripts
+export PATH=$PATH:$HOME/.rvm/bin
+
+# Enable shell history for IEX
+# https://til.hashrocket.com/posts/is9yfvhdnp-enable-history-in-iex-through-erlang-otp-20-
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+export PATH="/usr/local/opt/openssl/bin:$HOME/bin:$PATH"

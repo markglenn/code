@@ -5,6 +5,7 @@ endif
 
 " Required:
 set runtimepath^=~/.code/vim/dein/repos/github.com/Shougo/dein.vim
+set noautochdir
 
 " Required:
 call dein#begin(expand('~/.code/vim/dein'))

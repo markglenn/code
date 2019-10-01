@@ -28,11 +28,14 @@ command! QA qa
 colorscheme solarized
 
 " Remove the scrollbar
-set guioptions-=r
 set guioptions-=L
 
 " Set font
-set guifont=Monaco\ for\ Powerline:h13
+" set guifont=Monaco\ for\ Powerline:h13
+if has('gui_macvim')
+  " set macligatures
+  set guifont=Fira\ Code:h14
+endif
 
 " Search options
 set incsearch
@@ -56,6 +59,15 @@ elseif has('mouse')
   set mouse=a
   set ttymouse=xterm2
 endif
+
+set ttyfast      " Fast TTY that can handle fast scrolling
+set scrolloff=7  " Set lines to the cursor when moving vertically
+set noshowcmd
+
+set noerrorbells
+set visualbell
+set t_vb=
+set tm=500
 
 set completeopt=longest,menu
 runtime macros/matchit.vim

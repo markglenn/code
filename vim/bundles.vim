@@ -2,12 +2,11 @@ call dein#add('majutsushi/tagbar')
 call dein#add('scrooloose/nerdtree')
 call dein#add('ervandew/supertab')
 call dein#add('jlanzarotta/bufexplorer')
-call dein#add('editorconfig/editorconfig-vim')
 call dein#add('vim-airline/vim-airline')
 call dein#add('henrik/vim-indexed-search')
 call dein#add('Shougo/neocomplete.vim')
 
-call dein#add('kien/ctrlp.vim')
+call dein#add('ctrlpvim/ctrlp.vim')
 
 " Ruby specific
 call dein#add('kana/vim-textobj-user')
@@ -26,8 +25,6 @@ call dein#add('klen/python-mode')
 
 " Elixir specific
 call dein#add('elixir-lang/vim-elixir')
-call dein#add('slashmili/alchemist.vim')
-let g:alchemist_tag_disable = 1
 call dein#add('c-brenn/phoenix.vim')
 call dein#add('tpope/vim-projectionist')
 
@@ -44,4 +41,5 @@ call dein#add('airblade/vim-gitgutter')
 call dein#add('altercation/vim-colors-solarized')
 
 call dein#add('ludovicchabant/vim-gutentags')
+
 let g:gutentags_cache_dir = '~/.tags_cache'
