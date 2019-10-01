@@ -8,9 +8,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'othree/html5.vim'
 	Plug 'scrooloose/syntastic'
 	Plug 'jlanzarotta/bufexplorer'
-	Plug 'ervandew/supertab'
-
+	" Plug 'ervandew/supertab'
 	Plug 'altercation/vim-colors-solarized'
+
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
@@ -36,7 +38,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Jump to tag
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+" map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Load tags from current or any parent path
 set tags=tags;/
