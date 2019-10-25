@@ -13,6 +13,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'elixir-editors/vim-elixir'
+  Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
