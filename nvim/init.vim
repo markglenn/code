@@ -8,7 +8,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'othree/html5.vim'
 	Plug 'scrooloose/syntastic'
 	Plug 'jlanzarotta/bufexplorer'
-	" Plug 'ervandew/supertab'
 	Plug 'altercation/vim-colors-solarized'
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -30,16 +29,10 @@ if has("autocmd")
 	autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 endif
 
-let NERDTreeIgnore = ['\.pyc$', '^tags$', '__pycache__', '\.zeus\.sock$']
+let NERDTreeIgnore = ['\.pyc$', '^tags$', '__pycache__']
 
-"key mapping for window navigation
+" Key mapping for window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-" Jump to tag
-" map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
-" Load tags from current or any parent path
-set tags=tags;/
