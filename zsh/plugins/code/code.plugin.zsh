@@ -13,3 +13,9 @@ function c(){
     (>&2 echo "no such file or directory: $code_path/$1")
   fi
 }
+
+dotenv () {
+  set -a
+  [ -f "$PWD/.env" ] && source "$PWD/.env"
+  set +a
+}

@@ -162,3 +162,8 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+set wildignore+=*/tmp/*,*/assets/node_modules/*,*.git,*/_build
+
+let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
