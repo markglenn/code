@@ -1,6 +1,6 @@
 export ZSH=$HOME/.code/zsh
 
-plugins=(code git mix ruby rust docker nvm)
+plugins=(code git mix ruby rust docker)
 source $ZSH/init.zsh
 
 export PATH="/usr/local/bin:$PATH"
