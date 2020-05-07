@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/syntastic'
 	Plug 'jlanzarotta/bufexplorer'
 	Plug 'altercation/vim-colors-solarized'
+  Plug 'vimwiki/vimwiki'
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'elixir-editors/vim-elixir'

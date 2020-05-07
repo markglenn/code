@@ -74,3 +74,4 @@ runtime macros/matchit.vim
 
 set clipboard=unnamed
 let g:neocomplete#enable_at_startup = 1
+let g:vimwiki_list = [{'path': '~/Library/Mobile Documents/com~apple~CloudDocs/Documents/vimwiki'}]

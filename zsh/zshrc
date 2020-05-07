@@ -44,3 +44,4 @@ export PATH=$PATH:$HOME/.mix/escripts
 export PATH=$PATH:$HOME/.rvm/bin
 
 export PATH="/usr/local/opt/openssl/bin:$HOME/bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"

@@ -14,6 +14,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'elixir-editors/vim-elixir'
   Plug 'mhinz/vim-mix-format'
   Plug 'tpope/vim-fugitive'
+  Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -37,3 +38,5 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+let g:vimwiki_list = [{'path': '~/Library/Mobile Documents/com~apple~CloudDocs/Documents/vimwiki'}]
