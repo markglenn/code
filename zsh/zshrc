@@ -1,6 +1,6 @@
 export ZSH=$HOME/.code/zsh
 
-plugins=(code git mix ruby rust docker)
+plugins=(code git ruby rust docker nvm)
 source $ZSH/init.zsh
 
 export PATH="/usr/local/bin:$PATH"
@@ -24,6 +24,10 @@ if type thefuck > /dev/null 2>&1; then
   eval $(thefuck --alias)
 fi
 
+if type direnv > /dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
 case $TERM in
     xterm*)
         precmd () {print -Pn "\e]0;%~\a"}
@@ -37,11 +41,7 @@ if type brew > /dev/null 2>&1; then
   export GOROOT="$(brew --prefix)/opt/go/libexec"
 fi
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/.mix/escripts
-export PATH=$PATH:$HOME/.rvm/bin
+if [ -f $HOME/.localrc ]; then
+  source $HOME/.localrc
+fi
 
-export PATH="/usr/local/opt/openssl/bin:$HOME/bin:$PATH"
-export PATH="/usr/local/opt/node@10/bin:$PATH"

@@ -3,7 +3,7 @@
 function c(){
   local code_path=${CODE_HOME}
 
-  if [[ "$code_path" == ""  ]]; then
+  if [[ "$code_path" == "" ]]; then
     code_path="$HOME/code"
   fi
 
@@ -18,4 +18,13 @@ dotenv () {
   set -a
   [ -f "$PWD/.env" ] && source "$PWD/.env"
   set +a
+}
+
+githubview () {
+  local repo=$1
+  [[ ! $repo =~ "https://*" ]] && repo="https://github.com/${repo}"
+  local temp="$(mktemp -d)"
+  git clone --single-branch "${repo}" "${temp}"
+  code --wait -n "${temp}"
+  rm -rf "${temp}"
 }
